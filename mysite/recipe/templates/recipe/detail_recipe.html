@@ -1,0 +1,32 @@
+{% extends 'recipe/base.html' %}
+
+    {% block title%}
+Подробнее
+    {% endblock %}
+
+    {% block body %}
+<div>
+    <h1 class="menu_text">Подробнее</h1>
+</div>
+
+<div class="transparent-blur-box">
+
+        <h1 class="menu_text">{{object}}</h1>
+    <div>
+        <img class="img_size" src="{{ object.image.url }}" alt="{{ object.image.url }}">
+    </div>
+
+
+<p>{{object.description}}</p>
+<p>{{object.steps}}</p>
+<p>{{object.time}}</p>
+<p>{{object.author}}</p>
+<p>{{object.ingredients}}</p>
+<p>{{object.category}}</p>
+<p>{{object.date_create}}</p>
+</div>
+<div class="div_center">
+    <button><a class="button" href="{% url 'recipe:update_recipe' object.pk %}">Изменить рецепт</a></button>
+    <button><a class="button" href="{% url 'recipe:index' %}">На главную</a></button>
+</div>
+{% endblock %}

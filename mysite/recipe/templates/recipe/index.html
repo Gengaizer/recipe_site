@@ -1,0 +1,38 @@
+{% extends 'recipe/base.html' %}
+
+    {% block title%}
+Домашняя страница
+    {% endblock %}
+
+    {% block body %}
+<div>
+    <div>
+        <h2 class="menu_text">Домашняя страница</h2>
+    </div>
+
+            <div>
+                <div>
+                    <a class="text" href="{% url 'recipe:create_recipe'%}">Создать рецепт</a>
+                </div>
+                        {% if user.is_staff %}
+        <div>
+            <a class="text" href="{% url 'admin:index' %}">Админ-панель</a><br>
+        </div>
+
+        {% endif %}
+            </div>
+</div>
+
+<div>
+    <h2 class="menu_text">случайные рецепты</h2>
+</div>
+        {% for recipe in object_list %}
+
+            <li>
+                <a class="text" href="{% url 'recipe:detail_recipe' pk=recipe.pk %}">{{ recipe.name }}</a>
+
+            </li>
+        {% empty %}
+            <p>Пока ничего</p>
+        {% endfor %}
+    {% endblock %}

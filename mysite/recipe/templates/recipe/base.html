@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <style>
+        body {
+            background-image: url("{% static 'image/relief-texture-dark-bark-tree-close-up.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .menu_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    appearance: none;
+    border: 0;
+    border-radius: 7px;
+    background-image: url("{% static 'image/1679262070_vsegda-pomnim-com-p-lava-kamen-foto-73.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: orange;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+a {
+    text-decoration: none;
+}
+
+button a {
+    color: white;
+}
+
+.menu_text {
+    font-size: 20px;
+    color: orange;
+    text-align: center;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin: 5px;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgb(255, 165, 0),
+                     0 0 20px rgb(255, 165, 0),
+                     0 0 30px rgb(255, 140, 0),
+                     0 0 40px rgb(255, 140, 0),
+                     0 0 50px rgb(255, 140, 0),
+                     0 0 60px rgb(255, 140, 0),
+                     0 0 70px rgb(255, 140, 0);
+    }
+    to {
+        text-shadow: 0 0 20px #ffa500,
+                     0 0 30px #ffa500,
+                     0 0 40px #ffa500,
+                     0 0 50px #ffa500,
+                     0 0 60px #ffa500,
+                     0 0 70px #ffa500,
+                     0 0 80px #ffa500;
+    }
+}
+
+
+    .text {
+
+    color: wheat;
+        }
+        .transparent-blur-box {
+        display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    width: 70%;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(1px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+        }
+        .img_size{
+        width: 200px;
+        }
+        .div_center{
+        display: flex;
+    justify-content: space-evenly;
+    }
+        body p{
+        color: wheat;
+        }
+    </style>
+    <title>
+        {% block title%}
+
+    {% endblock %}
+    </title>
+
+    <div class="menu">
+        {% if not user.is_authenticated %}
+        <div>
+            <h5 class="menu_text">Вы не авторизованы</h5>
+        </div>
+
+        {% else %}
+        <div>
+            <p class="menu_text">Авторизован {{ user }}</p>
+        </div>
+
+        {% endif %}
+
+
+        {% if not user.is_authenticated %}
+        <div class="menu_button">
+            <div>
+                <button class="button_style"><a href="{% url 'myauth:login' %}">Вход</a></button>
+                <br>
+            </div>
+            <div>
+                <button><a href="{% url 'myauth:register' %}">Регистрация</a></button>
+            </div>
+
+
+            {% else %}
+            <div>
+                <button><a href="{% url 'myauth:logout' %}">Выход</a></button>
+            </div>
+
+
+            {% endif %}
+        </div>
+
+    </div>
+
+
+</head>
+<body>
+
+{% block body %}
+
+{% endblock %}
+</body>
+</html>
