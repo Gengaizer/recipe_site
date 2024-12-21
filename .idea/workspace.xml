@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce673ad3-2b35-4fdd-9345-61d7b584f747" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/database/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/recipe/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/recipe/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -42,11 +45,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site\mysite\recipe" />
+      <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site\mysite\database" />
       <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site" />
       <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site\mysite\static\image" />
       <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site\mysite" />
-      <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site\static" />
-      <recent name="C:\Users\Gennadiy\PycharmProjects\recipe_site\mysite\uploads" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -97,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733822291412</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="commit">
+      <option name="closed" value="true" />
+      <created>1733822906064</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733822906064</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
